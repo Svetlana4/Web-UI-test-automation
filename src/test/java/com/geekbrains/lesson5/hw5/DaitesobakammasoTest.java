@@ -32,7 +32,7 @@ public class DaitesobakammasoTest {
     }
 
     @Test
-    void checkoutShouldWork() throws InterruptedException {
+    void checkoutShouldWork() {
 
         driver.findElement(By.xpath("//td[text()='В каталог']")).click();
 
@@ -55,17 +55,10 @@ public class DaitesobakammasoTest {
         driver.findElement(By.xpath("//button[text()='Оформить заказ']")).click();
 
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Спасибо! Данные успешно отправлены.']")));
-//        Assertions.assertTrue(driver.findElement(By.xpath("//div[text()='Спасибо! Данные успешно отправлены.']")).isDisplayed());
-
-
-        assertThat(driver.findElement(By.xpath("//div[text()='Спасибо! Данные успешно отправлены.']")), is(isDisplayed()));
+        Assertions.assertTrue(driver.findElement(By.xpath("//div[text()='Спасибо! Данные успешно отправлены.']")).isDisplayed());
+//        assertThat(driver.findElement(By.xpath("//div[text()='Спасибо! Данные успешно отправлены.']")), is(isDisplayed()));
     }
-
-
-
-
-
-    @AfterEach /* после каждого теста будем убивать наш драйвер */
+    @AfterEach
     void tearDown() {
         driver.quit();
     }
