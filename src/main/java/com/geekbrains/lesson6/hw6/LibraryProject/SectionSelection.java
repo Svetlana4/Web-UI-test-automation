@@ -1,5 +1,6 @@
 package com.geekbrains.lesson6.hw6.LibraryProject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +16,7 @@ public class SectionSelection extends BaseView {
     @FindBy(xpath = "//div[@id='item-med']//a")
     private List<WebElement> kitList;
 
+    @Step("Выбор науки и комплекта по направлению")
     public BookSearchPage kitSelection(String nameKit) {
         scienceSelect.click();
         kitList.stream().filter(k -> k.getText().contains(nameKit)).findFirst().get().click();

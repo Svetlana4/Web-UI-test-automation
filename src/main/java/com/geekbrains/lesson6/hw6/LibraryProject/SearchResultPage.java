@@ -1,5 +1,6 @@
 package com.geekbrains.lesson6.hw6.LibraryProject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,13 +17,14 @@ public class SearchResultPage extends BaseView {
     @FindBy(xpath = "//div[@class='wrap-title-book-sengine']")
     public List<WebElement> bookSearchItemsList;
 
-   public BookPage selectFromList(String year, String name_book, String author) {
+    @Step("Выбор книги по году выпуска, автору и названию")
+    public BookPage selectFromList(String year, String name_book, String author) {
 
-       WebElement book = bookSearchItemsList.stream().filter(y -> y.getText().contains(year))
-               .filter(n -> n.getText().contains(author))
-               .filter(a -> a.getText().contains(name_book)).findFirst().get();
-       book.findElement(By.xpath(".//h2")).click();
+        WebElement book = bookSearchItemsList.stream().filter(y -> y.getText().contains(year))
+                .filter(n -> n.getText().contains(author))
+                .filter(a -> a.getText().contains(name_book)).findFirst().get();
+        book.findElement(By.xpath(".//h2")).click();
 
-       return new BookPage(driver);
+        return new BookPage(driver);
     }
 }
