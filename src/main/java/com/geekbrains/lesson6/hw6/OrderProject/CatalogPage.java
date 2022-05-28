@@ -15,7 +15,7 @@ public class CatalogPage extends BasePage {
     @FindBy(xpath = "//div[text()='Акции и скидки']")
     public WebElement addToDiscountsField;
 
-    public SelectionDiscountProductsPage katalog() {
+    public SelectionDiscountProductsPage сatalog() {
         addToKatalog.click();
         addToDiscountsField.click();
         return new SelectionDiscountProductsPage(driver);

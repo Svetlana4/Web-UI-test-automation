@@ -13,7 +13,7 @@ public class MainPage extends BaseView {
     public WebElement katalogButton;
 
     @Step("Клик на кнопку Каталог")
-    public SectionSelection addKatalog() {
+    public SectionSelection addCatalog() {
         katalogButton.click();
         return new SectionSelection(driver);
     }

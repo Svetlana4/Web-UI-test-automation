@@ -6,14 +6,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DaitesobakammasoTest {
+public class DaitesobakammasoTesting {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromiumdriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://daitesobakammaso.ru/");
 
-        WebElement directoryEntry = driver.findElement(By.xpath("//td[text()='В каталог']"));
-        directoryEntry.click();
+//        WebElement directoryEntry = driver.findElement(By.xpath("//td[text()='В каталог']"));
+//        directoryEntry.click();
+        driver.findElement(By.xpath("//td[text()='В каталог']")).click();
 
         driver.findElement(By.xpath("//div[text()='Акции и скидки']")).click();
 

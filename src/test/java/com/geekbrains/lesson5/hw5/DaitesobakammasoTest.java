@@ -38,11 +38,13 @@ public class DaitesobakammasoTest {
 
         driver.findElement(By.xpath("//div[text()='Акции и скидки']")).click();
 
+
         driver.findElement(By.xpath("//div[text()='Филе индейки']")).click();
 
         driver.findElement(By.xpath("//div[text()='Потрошки северного оленя']")).click();
 
         driver.findElement(By.xpath("//div[@class='t706__carticon-wrapper']")).click();
+
 
         driver.findElement(By.xpath("//input[@data-tilda-rule='name']")).sendKeys("Иван");
 
@@ -53,6 +55,7 @@ public class DaitesobakammasoTest {
         driver.findElement(By.xpath("//input[@name='Адрес']")).sendKeys("Москва, Советская, 32,2");
 
         driver.findElement(By.xpath("//button[text()='Оформить заказ']")).click();
+
 
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Спасибо! Данные успешно отправлены.']")));
         Assertions.assertTrue(driver.findElement(By.xpath("//div[text()='Спасибо! Данные успешно отправлены.']")).isDisplayed());

@@ -1,7 +1,5 @@
 package com.geekbrains.lesson6.hw6.OrderProject;
 
-import com.geekbrains.lesson6.hw6.OrderProject.CatalogPage;
-import com.geekbrains.lesson6.hw6.OrderProject.YourOrderBlock;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
@@ -30,7 +28,7 @@ public class OrderingTest {
     void orderingTest() {
         driver.get("https://daitesobakammaso.ru/");
         new CatalogPage(driver)
-                .katalog()
+                .сatalog()
                 .selectProduct("Филе индейки")
                 .selectProduct("Потрошки северного оленя")
                 .addDiscountProductsToCart()

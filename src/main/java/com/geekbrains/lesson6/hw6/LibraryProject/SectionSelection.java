@@ -13,6 +13,7 @@ public class SectionSelection extends BaseView {
 
     @FindBy(id = "btn-med-on")
     private WebElement scienceSelect;
+
     @FindBy(xpath = "//div[@id='item-med']//a")
     private List<WebElement> kitList;
 

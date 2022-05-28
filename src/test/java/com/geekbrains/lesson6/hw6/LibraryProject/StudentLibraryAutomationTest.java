@@ -1,6 +1,5 @@
 package com.geekbrains.lesson6.hw6.LibraryProject;
 
-import com.geekbrains.lesson7.CustomLogger1;
 import com.geekbrains.lesson7.hw7.CustomLogger;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Allure;
@@ -35,7 +34,7 @@ public class StudentLibraryAutomationTest {
     void bookOpeningWork() {
         driver.get("https://www.studentlibrary.ru/");
         FinalPage finalPage = new MainPage(driver)
-                .addKatalog()
+                .addCatalog()
                 .kitSelection("Медицина (ВО) ГЭОТАР-Медиа. Базовый комплект")
                 .bookSearch("фармакология 2018 Харкевич")
                 .selectFromList("2018", "Фармакология", "Харкевич Д.А.")
