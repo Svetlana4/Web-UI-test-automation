@@ -1,6 +1,5 @@
 package com.geekbrains.lesson7.hw7;
 
-import com.geekbrains.lesson7.CustomLogger1;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -17,6 +16,7 @@ public class CustomLogger implements WebDriverListener {
 
     public void beforeFindElement(WebDriver driver, By locator) {
         logger.info("Ищем элемент по локатору" + locator.toString());
+        System.out.println("fghfhgfhg");
         Allure.step("Ищем элемент по локатору" + locator.toString());
     }
 
